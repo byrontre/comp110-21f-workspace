@@ -1,5 +1,7 @@
-# TODO: Write docstring here
+"""Hype_Machine_Assignment."""
 
-# TODO: Initialize __author__ variable here
+__author__ = "730345086"
 
-# TODO: Implement your program logic here
+print("Well, " + input("Who might you be? ") + ", you need to get into it!")
+print("You have to believe in yourself more than anything, Byron!")
+print("Byron, chase that degree and secure the bag! ")
