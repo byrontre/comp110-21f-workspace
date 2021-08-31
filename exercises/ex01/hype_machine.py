@@ -1,4 +1,4 @@
-"""Hype_Machine_Assignment."""
+"""Hype Machine Assignment."""
 
 __author__ = "730345086"
 
