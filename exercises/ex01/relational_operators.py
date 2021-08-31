@@ -1,10 +1,16 @@
-"""Relational Operators Assignment."""
+"""You've Got Relational Consistency."""
 
 __author__ = "730345086"
 
-input("Left-hand side: ")
-input("Right-hand side: ")
-print("8 < 4 is False")
-print("8 >= 4 is True")
-print("8 == 4 is False")
-print("8 != 4 is True")
+taeyeon: str = input("Left-hand side: ")
+tiffany: str = input("Right-hand side: ")
+
+jessica = taeyeon + " < " + tiffany + " is False"
+yuri = taeyeon + " >= " + tiffany + " is True"
+yoona = taeyeon + " == " + tiffany + " is False"
+sunny = taeyeon + " != " + tiffany + " is True"
+
+print(jessica)
+print(yuri)
+print(yoona)
+print(sunny)
