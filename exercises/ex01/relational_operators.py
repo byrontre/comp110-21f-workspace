@@ -2,13 +2,13 @@
 
 __author__ = "730345086"
 
-taeyeon: str = input("Left-hand side: ")
-tiffany: str = input("Right-hand side: ")
+tae_yeon: str = input("Left-hand side: ")
+tif_fany: str = input("Right-hand side: ")
 
-jessica = taeyeon + " < " + tiffany + " is False"
-yuri = taeyeon + " >= " + tiffany + " is True"
-yoona = taeyeon + " == " + tiffany + " is False"
-sunny = taeyeon + " != " + tiffany + " is True"
+jessica = tae_yeon + " < " + tif_fany + " is False"
+yuri = tae_yeon + " >= " + tif_fany + " is True"
+yoona = tae_yeon + " == " + tif_fany + " is False"
+sunny = tae_yeon + " != " + tif_fany + " is True"
 
 print(jessica)
 print(yuri)
