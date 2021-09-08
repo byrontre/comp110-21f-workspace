@@ -1,6 +1,6 @@
-"""Counting letters in a string."""
+"""Counting Letters is as Easy as Chasing Pavements."""
 
-__author__ = "ENTER YOUR 9-DIGIT PID HERE"
+__author__ = "730345086"
 
 
 # Begin your solution here...
