@@ -1,6 +1,18 @@
-"""Repeating a beat in a loop."""
+"""Wash, Rinse and, Repeat."""
 
-__author__ = "ENTER YOUR 9-DIGIT PID HERE"
+__author__ = "730345086%"
 
+rhythm: int = 0
 
-# Begin your solution here...
+funky: str = (input("What beat do you want to repeat? ")) 
+groove: int = int(input("How many times do you want to repeat it? "))
+filler: str = " " + funky 
+
+if groove <= 0:
+    print("No beat...")
+else:
+    while rhythm < groove - 1:
+        funky = funky + filler 
+        rhythm = rhythm + 1 
+    print(funky)
+    
