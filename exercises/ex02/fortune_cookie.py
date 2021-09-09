@@ -6,7 +6,7 @@ from random import randint
 FORTUNE: int = int(randint(15, 40))
 
 print("Your fortune cookie says . . . ")
-fate: int = int(randint(15, 40)) 
+fate: int = int(randint(15, 40))
 
 if fate == FORTUNE:
     print("You won't be infected with the T-Virus! ")
