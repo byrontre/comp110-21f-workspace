@@ -1,6 +1,17 @@
-"""An exercise in remainders and boolean logic."""
+"""Tar Heels Win Regardless."""
 
-__author__ = "ENTER YOUR 9-DIGIT PID HERE"
+__author__ = "730345086"
 
 
-# Begin your solution here...
+puzzle: int = int(input("Enter an int: "))
+
+if puzzle % 2 == puzzle % 7 == 0:
+    print("TAR HEELS")
+else:
+    if puzzle % 2 == 0:
+        print("TAR")
+    else:
+        if puzzle % 7 == 0:
+            print("HEELS")
+        else:
+            print("CAROLINA")
