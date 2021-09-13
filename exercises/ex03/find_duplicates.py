@@ -8,9 +8,15 @@ tag: bool = False
 i: int = 0
 
 while i < len(select):
-    print("안녕하세요, 여러분!!! ")
+    current_letter: str = select[i] 
     k: int = i + 1
     while k < len(select):
-        print("비행기로 여행하기 싫어요. ")
+        next_letter: str = select[k] 
+        if current_letter == next_letter:
+            print("True")
+        k = k + 1 
+    i = i + 1
 
-print("지금은 소녀시대! ")
+        
+
+
