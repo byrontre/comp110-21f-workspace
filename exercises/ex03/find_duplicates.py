@@ -13,6 +13,10 @@ while i < len(select):
     while k < len(select):
         next_letter: str = select[k] 
         if current_letter == next_letter:
-            print("Found duplicate: True")
-            k = k + 1
-        i = i + 1
+            tag = True 
+        k = k + 1
+    i = i + 1
+if tag is True:
+    print("Found duplicate: True ")
+else:
+    print("Found duplicate False ")
