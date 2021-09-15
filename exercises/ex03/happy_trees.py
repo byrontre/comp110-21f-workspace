@@ -1,4 +1,4 @@
-"""The Answer is Forestry."""
+"""Where for Art Thou, EVergreen."""
 
 __author__ = "730345086"
 
@@ -16,5 +16,4 @@ else:
         while oak < pine:
             oak = oak + 1
             print(TREE * oak)
-        i = i + 1
-            
+        i = oak           
