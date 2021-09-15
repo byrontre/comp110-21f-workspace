@@ -19,4 +19,4 @@ while i < len(select):
 if tag is True:
     print("Found duplicate: True ")
 else:
-    print("Found duplicate False ")
+    print("Found duplicate: False ")
