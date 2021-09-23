@@ -4,7 +4,7 @@ __author__ = "730345086"
 
 from random import randint
 points: int = 0
-player = str
+player: str = " "
 ROSE: str = '\U0001F339'
 MOON: str = '\U0001F319'
 TRUTH: str = '\U0001F338'
@@ -30,13 +30,13 @@ def main() -> None:
                 points = points + 5
                 points = un_palace(points)
                 print(fin_valley())
-                new_path: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
-                path = new_path
+                new_fate: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
+                path = new_fate
     if path == 0:
         while path == 0:
             print(the_end())
-            new_path: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
-            path = new_path
+            new_way: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
+            path = new_way
     if path != (0, 2):
         print(f"Seeing as you are really determined to end your Game of Fates, let this final statement symbolize your potentially eternal departure. Chapelwell bids you farewell, {player}.")
         print(f"Total Tokens: {points}")
@@ -47,7 +47,7 @@ def greet() -> None:
     print("The Lordes and Titans of Chapelwell welcome you and ask that you oblige us in the Game of Fates! As the game progresses, you will receive varying amounts of tokens based on the choices you make so choose wisely.")
     global player 
     player = input("How may we address you, traveler?: ")
-    return 
+    return None
 
 
 def alp_wood() -> None:
@@ -61,13 +61,13 @@ def alp_wood() -> None:
         points = points + 7 
         print(f"Jeff hands you the {ROSE} emerald. As you stare into the stone, you begin to hear thunder right above you growing and growing until a bolt of lightning strikes you!")
         print(fin_valley())
-        return
+        return None
     else:
         if emerald == blue:
             points = points + 6
             print(f"Jeff hands you the {MOON} emerald. As you stare into the stone, it begins to shimmer brighter and brighter until a blinding white light consumes you!")
             print(fin_valley())
-            return 
+            return None 
 
 
 def un_palace(x: int) -> int:
@@ -100,7 +100,7 @@ def fin_valley() -> None:
             if rate != 10: 
                 print("You must suffer the consequences of rating incorrectly! Your points have been reduced!")
                 points = points - 3
-                return 
+                return None
             else:
                 points = points + chelsea
                 chelsea = chelsea - 10
@@ -108,7 +108,7 @@ def fin_valley() -> None:
                 print("After leaving the Final Valley, you stand at the peak of the mountain overlooking the land. Your Fate Flower begins to whisper, and you bring it to your ear. The flower says 'You must go and spread the Gospel of Jesus Christ to all peoples everywhere'.")
                 print("With determination in your heart and a sack of stolen pixie dust, you fly away into the fading sunset following your true fate.")
                 print(f"Goodbye, {player}.")
-                return
+                return None
     else: 
         if closer == death:
             points = points + 8
@@ -119,7 +119,7 @@ def fin_valley() -> None:
             if love == yes:
                 print("Sarafina suddenly turns into Marilyn Manson, and starts yelling at you about beautiful people. Your points have been reduced.")
                 points = points - 3
-                return
+                return None
             else:
                 if love == no: 
                     points = points + 10
@@ -127,6 +127,7 @@ def fin_valley() -> None:
                     print(f"You have defeated that horrid creature, Sarafina. Her breath was dreadful. Anyway, now that you have completed your final task, take this {TRUTH_X}, and see what fate lies beyond.")
                     print("After leaving the Final Valley, you come upon the River of Lenoir flowing from the top of the mountain. As the water rushes by, the Fate Clover begins to whisper. You hold the clover up to your ear as it says 'You must go and expose the truth behind the U.S. moon landing of 1969.")
                     print("With the white, hot passion of 1,000 suns and an expired Sheetz gift card, you set off down the river following your true fate.")
+                    return None
 
 
 def the_end() -> None:
