@@ -17,33 +17,29 @@ def main() -> None:
     print(greet())
     global points
     print(f"Total Tokens: {points}")
-    this: int = 1
-    that: int = 2
-    none: int = 0
     path: int = int(input(f"From here, {player}, your journey will begin with a shaman giving you a choice between three cards labeled 0, 1, and 2: "))
-    while path != none:
+    while path != 0:
         print(f"Total Tokens: {points}")
-        if path == this:
+        if path == 1:
             points = points + 5
             print(alp_wood())
             new_path: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
             path = new_path
         else:
-            if path == that:
+            if path == 2:
                 points = points + 5
                 points = un_palace(points)
                 print(fin_valley())
                 new_path: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
                 path = new_path
-    if path == none:
-        while path == none:
+    if path == 0:
+        while path == 0:
             print(the_end())
             new_path: int = int(input("If you would like to test your fate on a different path, please choose between 0, 1, and 2 again: "))
             path = new_path
-    if path < 0:
-        print(real_end())
-    if path > 2:
-        print(real_end())    
+    if path != (0, 2):
+        print(f"Seeing as you are really determined to end your Game of Fates, let this final statement symbolize your potentially eternal departure. Chapelwell bids you farewell, {player}.")
+        print(f"Total Tokens: {points}")
 
 
 def greet() -> None:
@@ -137,12 +133,6 @@ def the_end() -> None:
     """The Continuous Ending."""
     print("Unfortunately, your Game of Fates has come to an end. However, all of Chapelwell wishes you great prosperity and blessing. One day, perhaps, we'll meet again.")
     global points
-    print(f"Total Tokens: {points}")
-
-
-def real_end() -> None:
-    """The Real Ending."""
-    print(f"Seeing as you are really determined to end your Game of Fates, let this final statement symbolize your potentially eternal departure. Chapelwell bids you farewell, {player}.")
     print(f"Total Tokens: {points}")
 
 
