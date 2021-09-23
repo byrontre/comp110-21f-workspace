@@ -47,6 +47,7 @@ def main() -> None:
 
 
 def greet() -> None:
+    """Introduction."""
     print("The Lordes and Titans of Chapelwell welcome you and ask that you oblige us in the Game of Fates! As the game progresses, you will receive varying amounts of tokens based on the choices you make so choose wisely.")
     global player 
     player = input("How may we address you, traveler?: ")
@@ -54,6 +55,7 @@ def greet() -> None:
 
 
 def alp_wood() -> None:
+    """The First Adventure."""
     global points
     print(f"{player}, you have been teleported to the Alpine Wood and encountered Jeff. He will gift you one of two emeralds that will lead you to your fate.")
     red = 3
@@ -73,6 +75,7 @@ def alp_wood() -> None:
 
 
 def un_palace(x: int) -> int:
+    """The Second Adventure."""
     global points
     print(f"{player}, you have been teleported to the Union Palace and encountered Anti-Jeff. He will gift you one of two scrolls that will lead you to your fate.")
     hidden: int = x + FINAL
@@ -86,6 +89,7 @@ def un_palace(x: int) -> int:
 
 
 def fin_valley() -> None:
+    """The Final Adventure."""
     global points
     print(f"Well, {player}, not many are as fortunate and courageous as you have been in this Game of Fates. You have been summoned to the Final Valley, a mountain fortress overlooking the entirety of Chapelwell from the Great Carboroll Hills to the Very Cary Meadows. Your final task awaits you.")
     closer: int = int(input("Upon entering the fortress, you are immediately met with two parallel corridors. You must choose either 5 or 6: "))
@@ -130,12 +134,14 @@ def fin_valley() -> None:
 
 
 def the_end() -> None:
+    """The Continuous Ending."""
     print("Unfortunately, your Game of Fates has come to an end. However, all of Chapelwell wishes you great prosperity and blessing. One day, perhaps, we'll meet again.")
     global points
     print(f"Total Tokens: {points}")
 
 
 def real_end() -> None:
+    """The Real Ending."""
     print(f"Seeing as you are really determined to end your Game of Fates, let this final statement symbolize your potentially eternal departure. Chapelwell bids you farewell, {player}.")
     print(f"Total Tokens: {points}")
 
