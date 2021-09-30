@@ -8,4 +8,4 @@ def sum(xs: list[float]) -> float:
     while i < len(xs):
         total += xs[i]
         i += 1
-    return 0.0
+    return total
