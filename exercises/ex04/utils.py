@@ -37,6 +37,8 @@ def is_equal(a: list[int], b: list[int]) -> bool:
             if first != second:
                 return False
                 i += 1
+            else:
+                return fact
     return fact
 
 
