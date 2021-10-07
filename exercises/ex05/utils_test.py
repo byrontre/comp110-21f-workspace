@@ -13,13 +13,13 @@ def test_only_evens_abyss() -> None:
 
 
 def test_only_evens_minor() -> None:
-    """Use Case Single Integer."""
-    x: list[int] = [18]
+    """Use Case Two Integers."""
+    x: list[int] = [9, 18]
     assert only_evens(x) == [18]
 
 
 def test_only_evens_full() -> None:
-    """Use Case with Full Integers."""
+    """Use Case with Many Integers."""
     x: list[int] = [3, 6, 9, 12, 44]
     assert only_evens(x) == [6, 12, 44]
 
@@ -36,16 +36,16 @@ def test_sub_halfway() -> None:
     """Use Case with 'a and b'."""
     a: list[int] = [3, 4, 6, 7]
     b: int = -1
-    c: int = 0
-    assert sub(a, b, c) == []
+    c: int = 5
+    assert sub(a, b, c) == [3, 4]
 
 
 def test_sub_complete() -> None:
     """Use Case with 'a, b, and c'."""
     a: list[int] = [9, 10, 11, 12, 13]
-    b: int = 2
-    c: int = 6
-    assert sub(a, b, c) == [10, 11, 12, 13]
+    b: int = 0
+    c: int = 4
+    assert sub(a, b, c) == []
 
 
 def test_concat_no_nums() -> None:

@@ -19,10 +19,10 @@ def sub(a: list[int], b: int, c: int) -> list[int]:
     sub_set: list[int] = []
     if len(a) == 0 or b >= len(a) or c <= 0:
         return sub_set
-    for i in a:
+    for indices in a:
         if b < len(a) or c > len(a):
-            if i >= 0 and i <= c - 1:
-                sub_set.append(i)
+            if indices > b and indices <= c - 1:
+                sub_set.append(indices)
     return sub_set
             
 
@@ -36,4 +36,4 @@ def concat(one: list[int], two: list[int]) -> list[int]:
     return all_in
 
 
-print(sub([9, 10, 11, 12, 13], 2, 5))
+print(only_evens([3, 6]))
