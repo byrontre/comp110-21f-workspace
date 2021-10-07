@@ -35,6 +35,3 @@ def concat(one: list[int], two: list[int]) -> list[int]:
     for i in two:
         all_in.append(i)
     return all_in
-
-
-print(only_evens([3, 6]))
