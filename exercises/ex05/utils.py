@@ -17,13 +17,12 @@ def only_evens(x: list[int]) -> list[int]:
 def sub(a: list[int], b: int, c: int) -> list[int]:
     """Let's Make a List."""
     sub_set: list[int] = []
-    if len(a) == 0 or b > len(a) or c <= 0:
+    if len(a) == 0 or b >= len(a) or c <= 0:
         return sub_set
-    else:
-        for i in a:
-            if b < 0 or b > 0 or c > len(a):
-                if i >= b and i <= c - 1:
-                    sub_set.append(i)
+    for i in a:
+        if b >= 0 or c > len(a):
+            if i > b and i <= c - 1:
+                sub_set.append(i)
     return sub_set
             
 
@@ -35,3 +34,6 @@ def concat(one: list[int], two: list[int]) -> list[int]:
     for i in two:
         all_in.append(i)
     return all_in
+
+
+print(sub([9, 10, 11, 12, 13], 2, 5))
