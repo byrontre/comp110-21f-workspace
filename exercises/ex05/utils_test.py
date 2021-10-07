@@ -14,8 +14,8 @@ def test_only_evens_abyss() -> None:
 
 def test_only_evens_minor() -> None:
     """Use Case Two Integers."""
-    x: list[int] = [9, 18]
-    assert only_evens(x) == [18]
+    x: list[int] = [4, 7]
+    assert only_evens(x) == [4]
 
 
 def test_only_evens_full() -> None:
