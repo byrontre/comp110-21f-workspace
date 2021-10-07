@@ -20,8 +20,8 @@ def sub(a: list[int], b: int, c: int) -> list[int]:
     if len(a) == 0 or b >= len(a) or c <= 0:
         return sub_set
     for i in a:
-        if b >= 0 or c > len(a):
-            if i > b and i <= c - 1:
+        if b < len(a) or c > len(a):
+            if i >= 0 and i <= c - 1:
                 sub_set.append(i)
     return sub_set
             
