@@ -36,16 +36,16 @@ def test_sub_halfway() -> None:
     """Use Case with 'a and b'."""
     a: list[int] = [3, 4, 6, 7]
     b: int = -1
-    c: int = 5
-    assert sub(a, b, c) == [3, 4]
+    c: int = 0
+    assert sub(a, b, c) == []
 
 
 def test_sub_complete() -> None:
     """Use Case with 'a, b, and c'."""
-    a: list[int] = [9, 10, 11, 12, 13]
-    b: int = 0
-    c: int = 4
-    assert sub(a, b, c) == []
+    a: list[int] = [15, 16, 17, 18, 19]
+    b: int = 1
+    c: int = 5
+    assert sub(a, b, c) == [16, 17, 18, 19]
 
 
 def test_concat_no_nums() -> None:

@@ -16,15 +16,16 @@ def only_evens(x: list[int]) -> list[int]:
 
 def sub(a: list[int], b: int, c: int) -> list[int]:
     """Let's Make a List."""
+    i: int = 0
     sub_set: list[int] = []
     if len(a) == 0 or b >= len(a) or c <= 0:
         return sub_set
-    for indices in a:
-        if b < len(a) or c > len(a):
-            if indices > b and indices <= c - 1:
-                sub_set.append(indices)
+    while i < len(a):
+        if i >= b and i <= c - 1: 
+            sub_set.append(a[i])
+        i += 1
     return sub_set
-            
+
 
 def concat(one: list[int], two: list[int]) -> list[int]:
     """Put It All Together."""
