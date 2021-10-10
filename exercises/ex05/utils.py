@@ -7,10 +7,9 @@ def only_evens(x: list[int]) -> list[int]:
     """Find the Even Ints."""
     i: int = 0
     while i < len(x):
-        read: int = x[i]
-        if read % 2 > 0:
-            x.pop(i)
-        i += 1
+        if x[0] % 2 > 0:
+            x.pop(x[0])
+        i += 1   
     return x
 
 
@@ -35,3 +34,6 @@ def concat(one: list[int], two: list[int]) -> list[int]:
     for i in two:
         all_in.append(i)
     return all_in
+
+
+print(only_evens([32, 54, 27, 96, 18]))
