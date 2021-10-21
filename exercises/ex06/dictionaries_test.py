@@ -14,7 +14,7 @@ def test_invert_bland() -> None:
 def test_invert_small_set() -> None:
     """Use Case with Minimal Key & Values."""
     trace: dict[str, str] = {"a": "tuna", "b": "salmon"}
-    assert invert(trace) == {"tuna": "a", "salmon": "b"}
+    assert invert(trace) == {"tuna": "a", "salmon": "b"} 
 
 
 def test_invert_completion() -> None:

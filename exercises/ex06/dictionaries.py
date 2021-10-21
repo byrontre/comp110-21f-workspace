@@ -7,9 +7,10 @@ def invert(trace: dict[str, str]) -> dict[str, str]:
     """Flip the Dictionary."""
     filler: dict[str, str] = {}
     for keys in trace:
-        filler[trace[keys]] = keys
         if keys in filler:
             raise KeyError("Access denied: Duplicate keys detected.")
+        else:
+            filler[trace[keys]] = keys
     return filler
             
 
@@ -24,8 +25,8 @@ def favorite_color(red: dict[str, str]) -> str:
             score[red[keys]] += 1
     for keys in score:
         if score[keys] > counter:
-            counter = score[keys]
             this_color = keys
+        counter = score[keys]
     return this_color
         
 
@@ -40,5 +41,3 @@ def count(value: list[str]) -> dict[str, int]:
             new_list[value[i]] = 1
         i += 1
     return new_list
-
-    
