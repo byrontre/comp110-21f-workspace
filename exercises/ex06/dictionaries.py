@@ -13,7 +13,7 @@ def invert(trace: dict[str, str]) -> dict[str, str]:
     return filler
             
 
-def favorite_colors(red: dict[str, str]) -> str:
+def favorite_color(red: dict[str, str]) -> str:
     """Pick a Color, Return the Most Frequent."""
     score: dict[str, int] = {}
     this_color: str = ""

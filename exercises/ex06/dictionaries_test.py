@@ -1,6 +1,6 @@
 """Unit tests for dictionary functions."""
 
-from exercises.ex06.dictionaries import invert, favorite_colors, count
+from exercises.ex06.dictionaries import invert, favorite_color, count
 
 __author__ = "730345086"
 
@@ -23,22 +23,22 @@ def test_invert_completion() -> None:
     assert invert(trace) == {"bunny": "c", "turtle": "d", "squid": "e", "mouse": "f", "owl": "g"}
 
 
-def test_favorite_colors_busted() -> None:
+def test_favorite_color_busted() -> None:
     """Edge Case with No Dict."""
     red: dict[str, str] = {}
-    assert favorite_colors(red) == ""
+    assert favorite_color(red) == ""
     
 
-def test_favorite_colors_simple() -> None:
+def test_favorite_color_simple() -> None:
     """Use Case with Basic Dict."""
     red: dict[str, str] = {"sugar": "red", "milk": "blue", "butter": "red"}
-    assert favorite_colors(red) == "red"
+    assert favorite_color(red) == "red"
 
 
-def test_favorite_colors_valhalla() -> None:
+def test_favorite_color_valhalla() -> None:
     """Use Case with Full Dict."""
     red: dict[str, str] = {"earth": "yellow", "wind": "pink", "fire": "green", "water": "pink", "lightning": "yellow"}
-    assert favorite_colors(red) == "yellow"
+    assert favorite_color(red) == "yellow"
 
 
 def test_count_lukewarm() -> None:
@@ -47,6 +47,7 @@ def test_count_lukewarm() -> None:
     assert count(value) == {}
 
 
+def test_count_boiling() -> None:
     """Use Case with Minor List."""
     value: list[str] = ["tea", "tea", "egg", "bacon"]
     assert count(value) == {"tea": 2, "egg": 1, "bacon": 1}
