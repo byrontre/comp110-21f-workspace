@@ -1,29 +1,20 @@
 """This is the Testing Arena for Things to See How They Run."""
 
+from random import randint 
 
-case_bot: dict[int, str] = {}
+safe: dict[int, str] = {2: "No", 4: "One", 6: "Is", 8: "As", 10: "Lucky", 12: "As", 14: "Us"}
+lock_box: dict[str, int] = {}
+print("We need a resolution.")
+for keys in safe:
+    lock_box[safe[keys]] = randint(1, 10)
+    if safe[keys] in lock_box:
+        lock_box[safe[keys]] += randint(1, 10)
+for keys in lock_box:
+    i: int = lock_box[keys]
+    if i <= 5:
+        lock_box.pop(keys)
+    else:
+        if i <= 10:
+            lock_box[keys] += randint(1, 10)
 
-snatch: str = '\U0001F430'
-catch: str = '\U0001F419'
-latch: str = '\U0001F436'
-
-case_bot[10] = snatch
-case_bot[12] = catch
-case_bot[14] = latch
-
-print(case_bot)
-
-case_bot.pop(12)
-
-filler: str = '\U0001F456'
-
-case_bot[16] = filler
-
-print(case_bot)
-
-safe_bot: dict[str, int] = {}
-
-for keys in case_bot:
-    safe_bot[case_bot[keys]] = keys
-
-print(safe_bot)
+print(lock_box)
