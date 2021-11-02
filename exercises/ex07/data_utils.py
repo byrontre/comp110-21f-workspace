@@ -37,25 +37,25 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 def head(x: dict[str, list[str]], y: int) -> dict[str, list[str]]:
     """Return a Column with N Rows."""
-    stem: dict[str, list[str]] = {}  # ask about this for office hours
+    stem: dict[str, list[str]] = {} 
     for keys in x:
         store: list[str] = []
-        i: int = 0 
+        i: int = 0
+        if len(x[keys]) < y:
+            y = len(x[keys])
         while i < y:
             store.append(x[keys][i])
-            i += 1  
+            i += 1
+        stem[keys] = store 
     return stem
 
 
 def select(a: dict[str, list[str]], b: list[str]) -> dict[str, list[str]]:
     """Produce Subset of Columns from Total Column Data."""
-    reject: dict[str, list[str]] = {}   # ask about this for office hours
-    i: int = 0
-    for keys in a:
-        while i < len(b):
-            reject[b[i]] = a[keys]
-            i += 1
-    return reject 
+    totem: dict[str, list[str]] = {} 
+    for keys in b:
+        totem[keys] = a[keys]
+    return totem
 
 
 def concat(one: dict[str, list[str]], two: dict[str, list[str]]) -> dict[str, list[str]]:
@@ -65,13 +65,13 @@ def concat(one: dict[str, list[str]], two: dict[str, list[str]]) -> dict[str, li
         combo[keys] = one[keys]
     for keys in two:
         if keys in combo:
-            combo[keys].append   # ask about this for office hours
+            combo[keys] += two[keys]
         else:
             combo[keys] = two[keys]
     return combo
 
 
-def count(intro: list[str]) -> dict[str, int]:  # ask to check over for office hours 
+def count(intro: list[str]) -> dict[str, int]:
     """Return the Dict of Frequencies."""
     outro: dict[str, int] = {}
     i: int = 0
