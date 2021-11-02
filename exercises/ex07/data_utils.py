@@ -28,7 +28,6 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
 def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Transform a row-oriented able into a column-oriented table."""
     result: dict[str, list[str]] = {}
-
     first_row: dict[str, str] = row_table[0]
     for column in first_row:
         result[column] = column_values(row_table, column)
@@ -38,17 +37,48 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 def head(x: dict[str, list[str]], y: int) -> dict[str, list[str]]:
     """Return a Column with N Rows."""
-    stem: dict[str, list[str]] = {}
+    stem: dict[str, list[str]] = {}  # ask about this for office hours
+    for keys in x:
+        store: list[str] = []
+        i: int = 0 
+        while i < y:
+            store.append(x[keys][i])
+            i += 1  
     return stem
 
 
 def select(a: dict[str, list[str]], b: list[str]) -> dict[str, list[str]]:
-    """Produce Subset of Columns from Total Colum Data."""
-    reject: dict[str, list[str]] = {}
+    """Produce Subset of Columns from Total Column Data."""
+    reject: dict[str, list[str]] = {}   # ask about this for office hours
+    i: int = 0
+    for keys in a:
+        while i < len(b):
+            reject[b[i]] = a[keys]
+            i += 1
     return reject 
 
 
 def concat(one: dict[str, list[str]], two: dict[str, list[str]]) -> dict[str, list[str]]:
     """Combine Two Dicts into One Dict."""
     combo: dict[str, list[str]] = {}
+    for keys in one:
+        combo[keys] = one[keys]
+    for keys in two:
+        if keys in combo:
+            combo[keys].append   # ask about this for office hours
+        else:
+            combo[keys] = two[keys]
     return combo
+
+
+def count(intro: list[str]) -> dict[str, int]:  # ask to check over for office hours 
+    """Return the Dict of Frequencies."""
+    outro: dict[str, int] = {}
+    i: int = 0
+    while i < len(intro):
+        if intro[i] in outro:
+            outro[intro[i]] += 1
+        else:
+            outro[intro[i]] = 1
+        i += 1
+    return outro
